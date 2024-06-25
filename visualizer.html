@@ -1,0 +1,38 @@
+<!-- http://localhost:3001/visualizer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Visualizer</title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; img-src 'self' data:;"> -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+        canvas {
+            display: block;
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <audio id="audio" controls>
+        <source src="http://localhost:3001/proxy?url=https://file-examples.com/storage/fedab560656679c849d6def/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg">
+        <!-- <source src="http://localhost:3001/proxy?url=file:///Users/devgovindji/CodeBases/r3f-projects/music-visualizer/public/file_example_MP3_5MG.mp3" type="audio/mpeg"> -->
+        <!-- <source src="http://localhost:3001/proxy?url=public/file_example_MP3_5MG.mp3" type="audio/mpeg"> -->
+        
+        <!-- <source src="https://file-examples.com/storage/fedab560656679c849d6def/2017/11/file_example_MP3_5MG.mp3" type="audio/mpeg"> -->
+        <!-- <source src="file:///Users/devgovindji/CodeBases/r3f-projects/music-visualizer/public/file_example_MP3_5MG.mp3" type="audio/mpeg"> -->
+        <!-- <source src="public/file_example_MP3_5MG.mp3" type="audio/mpeg"> -->
+        Your browser does not support the audio element.
+    </audio>
+    <canvas id="canvas"></canvas>
+    <script src="visualizer.js"></script>
+</body>
+</html>
